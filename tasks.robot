@@ -4,7 +4,7 @@
 *** Settings ***
 Documentation     Opens the Twitter web page and stores some content.
 Library           Collections
-Library           RPA.Browser
+Library           RPA.Browser.Selenium
 Library           RPA.FileSystem
 Library           RPA.RobotLogListener
 
