@@ -17,12 +17,7 @@ ${TWEETS_LOCATOR}=    xpath://article[descendant::span[contains(text(), "\@${USE
 *** Keywords ***
 Open Twitter homepage
     Open Available Browser    https://mobile.twitter.com/${USER_NAME}
-
-*** Keywords ***
-Accept the cookie notice
-    Run Keyword And Ignore Error
-    ...    Click Element When Visible
-    ...    xpath://span[contains(text(), "Close")]
+    Wait Until Element Is Visible    css:main
 
 *** Keywords ***
 Hide element
@@ -77,7 +72,6 @@ Store the tweets
 *** Tasks ***
 Store the latest tweets by given user name
     Open Twitter homepage
-    Accept the cookie notice
     Hide distracting UI elements
     Scroll down to load dynamic content
     Store the tweets
