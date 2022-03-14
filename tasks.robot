@@ -32,6 +32,8 @@ Hide distracting UI elements
     ...    nav
     ...    div[data-testid="primaryColumn"] > div > div
     ...    div[data-testid="sidebarColumn"]
+    ...    div[data-testid="inlinePrompt"]
+    ...    div[data-testid="sheetDialog"]
     FOR    ${locator}    IN    @{locators}
         Hide element    ${locator}
     END
@@ -41,6 +43,7 @@ Scroll down to load dynamic content
     FOR    ${pixels}    IN RANGE    200    2000    200
         Execute Javascript    window.scrollBy(0, ${pixels})
         Sleep    500ms
+        Hide distracting UI elements
     END
     Execute Javascript    window.scrollTo(0, 0)
     Sleep    500ms
