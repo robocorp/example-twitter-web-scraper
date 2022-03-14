@@ -1,6 +1,3 @@
-# ## Twitter web scraper example
-# Opens the Twitter web page and stores some content.
-
 *** Settings ***
 Documentation     Opens the Twitter web page and stores some content.
 Library           Collections
